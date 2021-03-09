@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="app_hint">请点击数值较大的按钮，以获取分数~</string>
+</resources>
