@@ -10,18 +10,24 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
 
     private var score = 0
+    private var leftButton : Button? = null
+    private var rightButton : Button? = null
+    private var scoreTextView : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        leftButton = findViewById<Button>(R.id.button_l)
+        rightButton = findViewById<Button>(R.id.button_r)
+        scoreTextView = findViewById<TextView>(R.id.textView_score)
         refresh()
     }
 
 
     fun lbClick(view: View) {
-        val lNum = findViewById<Button>(R.id.button_l).text.toString().toInt()
-        val rNum = findViewById<Button>(R.id.button_r).text.toString().toInt()
+        val lNum = leftButton?.text?.toString()?.toInt() ?: 0
+        val rNum = rightButton?.text?.toString()?.toInt() ?: 0
         if (lNum >= rNum) {
             score++
         } else {
@@ -31,8 +37,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun rbClick(view: View) {
-        val lNum = findViewById<Button>(R.id.button_l).text.toString().toInt()
-        val rNum = findViewById<Button>(R.id.button_r).text.toString().toInt()
+        val lNum = leftButton?.text?.toString()?.toInt() ?: 0
+        val rNum = rightButton?.text?.toString()?.toInt() ?: 0
         if (lNum <= rNum) {
             score++
         } else {
@@ -41,9 +47,9 @@ class MainActivity : AppCompatActivity() {
         refresh()
     }
 
-    fun refresh() {
-        findViewById<TextView>(R.id.textView_score).text = "得分：$score"
-        findViewById<Button>(R.id.button_l).text = Random.nextInt(100).toString()
-        findViewById<Button>(R.id.button_r).text = Random.nextInt(100).toString()
+    private fun refresh() {
+        scoreTextView?.text = "得分：$score"
+        leftButton?.text = Random.nextInt(100).toString()
+        rightButton?.text = Random.nextInt(100).toString()
     }
 }
