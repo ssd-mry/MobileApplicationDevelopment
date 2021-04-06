@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置菜单项-->
+    <item
+        android:id="@+id/itemSet"
+        android:title="设置" />
+
+    <!--新建菜单项-->
+    <item
+        android:id="@+id/itemNew"
+        android:title="新建" />
+
+    <!--打印菜单项-->
+    <item
+        android:id="@+id/itemPrint"
+        android:title="打印" />
+
+    <!--邮件菜单项-->
+    <item
+        android:id="@+id/itemMail"
+        android:title="邮件" />
+
+</menu>

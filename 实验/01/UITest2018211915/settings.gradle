@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "UITest2018211915"
