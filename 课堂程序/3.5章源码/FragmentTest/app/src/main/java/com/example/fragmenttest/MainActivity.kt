@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-//        val fragmentManager = supportFragmentManager
-//        val transaction = fragmentManager.beginTransaction()
-//        transaction.replace(R.id.rightLayout, fragment)
-//        transaction.addToBackStack(null)
-//        transaction.commit()
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.rightLayout, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
 }

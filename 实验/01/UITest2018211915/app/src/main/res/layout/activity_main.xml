@@ -20,7 +20,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
             android:text="姓名:"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <!--姓名输入框-->
         <EditText
@@ -52,7 +52,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
             android:text="年龄:"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <!--年龄输入框-->
         <EditText
@@ -85,7 +85,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
             android:text="身高:"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <!--身高输入框-->
         <EditText
